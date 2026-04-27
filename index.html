@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="NutriAct">
+    <title>NutriAct — Дневник питания и активности</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%234CAF50'/><text x='50' y='70' text-anchor='middle' fill='white' font-size='48' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">NutriAct</div>
+            <nav class="nav-links">
+                <a href="#" data-page="dashboard" class="active">Главная</a>
+                <a href="#" data-page="food">Я съел</a>
+                <a href="#" data-page="diary">Дневник</a>
+                <a href="#" data-page="activity">Активность</a>
+                <a href="#" data-page="analytics">Аналитика</a>
+                <a href="#" data-page="profile">Профиль</a>
+            </nav>
+            <button id="logoutBtn" class="logout-btn" style="display: none;">Выйти</button>
+        </header>
+        <main id="pageContent"></main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="utils.js"></script>
+    <script src="db.js"></script>
+    <script src="auth.js"></script>
+    <script src="sync.js"></script>
+    <script src="deepseek.js"></script>
+    <script src="food.js"></script>
+    <script src="activity.js"></script>
+    <script src="analytics.js"></script>
+    <script src="export.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
